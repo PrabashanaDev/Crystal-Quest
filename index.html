@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crystal Quest - 2D Adventure</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        
+        <div id="gameUI">
+            <div>Score: <span id="score">0</span></div>
+            <div>Lives: <span id="lives">3</span></div>
+            <div>Level: <span id="level">1</span></div>
+            <div>Crystals: <span id="crystals">0</span>/3</div>
+        </div>
+
+        <div id="controls">
+            Arrow Keys: Move | Spacebar: Jump | Collect crystals to advance!
+        </div>
+
+        <div id="story">
+            <h1>🌟 Crystal Quest 🌟</h1>
+            <p>
+                Long ago, the magical Crystal Kingdom was protected by three powerful gems that maintained peace and harmony. 
+                But one dark night, an evil shadow scattered these crystals across dangerous lands.
+            </p>
+            <p>
+                You are Alex, a brave young adventurer chosen by the ancient spirits to restore balance to the kingdom. 
+                Journey through mystical forests, avoid dangerous creatures, and collect all the crystals to save your homeland!
+            </p>
+            <p>
+                <strong>Your quest begins now...</strong>
+            </p>
+            <button id="startButton">Begin Adventure</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

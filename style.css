@@ -1,0 +1,188 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Game Container */
+#gameContainer {
+    position: relative;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    background: #87CEEB;
+}
+
+/* Canvas Styling */
+canvas {
+    display: block;
+    background: linear-gradient(180deg, #87CEEB 0%, #90EE90 70%, #228B22 100%);
+}
+
+/* Game UI Elements */
+#gameUI {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    z-index: 100;
+}
+
+#gameUI div {
+    margin-bottom: 5px;
+}
+
+/* Story Screen */
+#story {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.9);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+#story h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #FFD700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+#story p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 600px;
+    opacity: 0.9;
+}
+
+/* Start Button */
+#startButton {
+    background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    font-size: 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#startButton:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+#startButton:active {
+    transform: scale(0.98);
+}
+
+/* Controls Instructions */
+#controls {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: white;
+    font-size: 12px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.3);
+    padding: 8px 12px;
+    border-radius: 5px;
+    z-index: 50;
+}
+
+/* Animations */
+@keyframes glow {
+    from {
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5), 0 0 10px #FFD700;
+    }
+    to {
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5), 0 0 20px #FFD700, 0 0 30px #FFD700;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    #gameContainer {
+        margin: 10px;
+    }
+    
+    canvas {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    #story h1 {
+        font-size: 28px;
+    }
+    
+    #story p {
+        font-size: 16px;
+    }
+    
+    #gameUI {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    #story h1 {
+        font-size: 24px;
+    }
+    
+    #story p {
+        font-size: 14px;
+    }
+    
+    #startButton {
+        font-size: 18px;
+        padding: 12px 24px;
+    }
+    
+    #controls {
+        font-size: 10px;
+        bottom: 5px;
+        right: 5px;
+    }
+}
+
+/* Utility Classes */
+.hidden {
+    display: none !important;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
