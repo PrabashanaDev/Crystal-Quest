@@ -205,7 +205,7 @@
 
         startButton.addEventListener('click', () => {
             gameState = 'playing';
-            storyScreen.classList.add('hidden');
+            storyScreen.style.display = 'none';
             gameLoop();
         });
 
